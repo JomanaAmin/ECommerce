@@ -1,3 +1,6 @@
+using ECommerceApp.Data.Interfaces;
+using ECommerceApp.Data.Mocks;
+
 namespace ECommerceApp
 {
     public class Program
@@ -8,7 +11,8 @@ namespace ECommerceApp
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddTransient<IItemRepository, MockItemRepository>();
+            builder.Services.AddTransient<ICategoryRepository, MockCategoryRepository>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -21,8 +25,9 @@ namespace ECommerceApp
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
-            app.UseRouting();
+            app.UseDeveloperExceptionPage(); //new
+            app.UseStatusCodePages(); //new
+            app.UseRouting(); 
 
             app.UseAuthorization();
 
