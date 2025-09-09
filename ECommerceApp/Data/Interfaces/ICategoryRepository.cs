@@ -4,7 +4,7 @@ namespace ECommerceApp.Data.Interfaces
 {
     public interface ICategoryRepository
     {
-        //public IEnumerable <Item> GetCategoryItems { get; }
+        //public IEnumerable<Item> GetCategoryItems(Category category);
         public IEnumerable<Category> GetCategories { get; }
 
     }

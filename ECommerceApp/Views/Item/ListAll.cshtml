@@ -20,7 +20,8 @@
                 <h4>Description: @item.Description </h4>
                 <h4>Price: @item.Price </h4>
                 <h4>Category: @item.Category.Name </h4>
-                <h4>Availability: (@item.IsAvailable?"Available:"Not Available:) </h4>
+                <h4>Availability: @(item.IsAvailable?"Available":"Not Available") </h4>
+                <img src="@item.imageUrl" alt="@item.Name" />
             </div>
         }
     }
