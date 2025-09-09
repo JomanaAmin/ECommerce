@@ -13,11 +13,11 @@ namespace ECommerceApp.Controllers
             this.itemRepository = itemRepository;
             this.categoryRepository = categoryRepository;
         }
-        public IActionResult ListAll()
+        public IActionResult ViewAllItems()
         {
             ItemListViewModel items= new ItemListViewModel(); 
             items.ItemsList=itemRepository.GetAllItems;
-            items.CurrentCategory="All Items";
+            items.CurrentCategory="All Categories";
             return View(items);
         }
     }

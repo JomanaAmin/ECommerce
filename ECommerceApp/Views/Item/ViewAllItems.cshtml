@@ -1,0 +1,39 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListAll</title>
+    <style>
+        section
+        {
+            padding: 60px 0;
+        }
+    </style>
+    @* <link rel="stylesheet" href="~/css/Item/ListAll.css" /> *@
+</head>
+<body>
+    <h1 class="display-3">Category: @Model.CurrentCategory</h1>
+    <!--Menu items-->
+    <section id="menu-items">
+        <div class="container">
+            <div class="row justify-content-center g-3">
+                @{
+
+                    foreach (Item item in Model.ItemsList)
+                    {
+                        @Html.Partial("ItemSummary", item)
+                    }
+                }
+            </div>
+        </div>
+    </section>
+   
+    <!--footer-->
+
+    
+</body>
+</html>
+
