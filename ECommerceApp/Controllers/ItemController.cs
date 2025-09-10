@@ -1,5 +1,6 @@
 ﻿using ECommerceApp.Data.Interfaces;
 using ECommerceApp.Data.ViewModels;
+using ECommerceApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ECommerceApp.Controllers
@@ -20,5 +21,15 @@ namespace ECommerceApp.Controllers
             items.CurrentCategory="All Categories";
             return View(items);
         }
+        public IActionResult FindItemById(int id) { 
+            Item item=itemRepository.GetItemById(id);
+            return View(item);
+        }
+        //public IActionResult ViewByCategory(Category Category) {
+        //    ItemListViewModel items = new ItemListViewModel();
+        //    items.ItemsList = itemRepository.GetItemsByCategory(Category);
+
+        //    return View(items);
+        //}
     }
 }

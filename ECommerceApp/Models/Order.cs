@@ -10,13 +10,16 @@
     }
     public class Order
     {
-        public int Id { get; set; }
+        public int OrderId { get; set; }
+        public DateTime Date { get; set; }
         public string Address { get; set; }
 
-        public int userID { get; set; }
+        public int UserID { get; set; }
+        public User User { get; set; }
 
-        public int price { get; set; }
+        public decimal Total { get; set; }
 
         public Status OrderStatus { get; set; }
+        public IEnumerable<CartItem> OrderItems { get; set; }  
     }
 }

@@ -1,4 +1,7 @@
 ﻿body {
 }
 .menu-item {
+    padding: 15px;
+    margin-bottom: 20px;
+    background: red;
 }
