@@ -6,7 +6,7 @@
 
 ---
 
-### Portfolio Description (detailed)
+### Detailed Description 
 
 The **Restaurant Website** is a solo project built using **ASP.NET Core MVC** and **C#**, designed to provide a smooth and user-friendly experience for browsing and ordering food online. The project applies modern web development practices with a focus on responsive design and database integration.
 
